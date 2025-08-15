@@ -17,7 +17,7 @@ variables:
   imageRepository: 'demobook'
   containerRegistry: 'acrdemomc.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'v1'
 
 stages:
 - stage: Build
