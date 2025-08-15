@@ -14,11 +14,11 @@ variable "imageversion" {
   default     = "v1"
 }
 
-variable "dockerhub-username" {
+variable "acr-username" {
   description = "Image tag to deploy"
 }
 
-variable "dockerhub-password" {
+variable "acr-password" {
   sensitive = true
 }
 
@@ -32,7 +32,7 @@ resource "azurerm_container_group" "aci-myapp" {
 
   container {
     name   = "myappdemo"
-    image  = "${var.dockerhub-username}/demobook:${var.imageversion}"
+    image  = "acrdemomc.azurecr.io/demobook:${var.imageversion}"
     cpu    = "0.5"
     memory = "1.5"
     ports {
@@ -41,8 +41,8 @@ resource "azurerm_container_group" "aci-myapp" {
     }
   }
   image_registry_credential {
-    server   = "index.docker.io"
-    username = var.dockerhub-username
-    password = var.dockerhub-password
+    server   = "acrdemomc.azurecr.io"
+    username = var.acr-username
+    password = var.acr-password
   }
 }
