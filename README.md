@@ -1,5 +1,5 @@
 [![Build Status](https://dev.azure.com/michalczarnecki03/BookLab08/_apis/build/status%2FSkrytyZubr.docker-terraform-azure-pipeline?branchName=main)](https://dev.azure.com/michalczarnecki03/BookLab08/_build/latest?definitionId=6&branchName=main)
-[![Build Status](https://dev.azure.com/michalczarnecki03/BookLab08/_apis/build/status%2FSkrytyZubr.docker-terraform-azure-pipeline?branchName=main)](https://dev.azure.com/michalczarnecki03/BookLab08/_build/latest?definitionId=6&branchName=main)
+[![](https://dev.azure.com/michalczarnecki03/BookLab08/_apis/build/status%2FSkrytyZubr.docker-terraform-azure-pipeline?branchName=main)]
 
 # Docker → ACR → ACI with Azure Pipelines and Terraform
 
