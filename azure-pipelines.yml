@@ -38,7 +38,7 @@ stages:
 
     - script: terraform init --backend-config backend.tfvars
       displayName: Init terraform
-      workingDirectory: ${Build.SourcesDirectory}/terraform-aci
+      workingDirectory: /terraform-aci
       env:
         ARM_CLIENT_ID: $(ARM_CLIENT_ID)
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
@@ -48,7 +48,7 @@ stages:
 
     - script: terraform apply -auto-approve
       displayName: Terraform apply
-      workingDirectory: $(Build.SourcesDirectory)/terraform
+      workingDirectory: /terraform-aci
       env:
         ARM_CLIENT_ID: $(ARM_CLIENT_ID)
         ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
