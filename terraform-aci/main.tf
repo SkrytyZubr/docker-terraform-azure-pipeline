@@ -40,9 +40,9 @@ resource "azurerm_container_group" "aci-myapp" {
       protocol = "TCP"
     }
   }
-  image_registry_credential {
-    server   = "acrdemomc.azurecr.io"
-    username = var.acr-username
-    password = var.acr-password
-  }
+#   image_registry_credential {
+#     server   = "acrdemomc.azurecr.io"
+#     username = var.acr-username
+#     password = var.acr-password
+#   }
 }
