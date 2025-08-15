@@ -14,11 +14,11 @@ variable "imageversion" {
   default     = "v1"
 }
 
-variable "acr-username" {
+variable "acr_username" {
   description = "Image tag to deploy"
 }
 
-variable "acr-password" {
+variable "acr_password" {
   sensitive = true
 }
 
@@ -40,9 +40,9 @@ resource "azurerm_container_group" "aci-myapp" {
       protocol = "TCP"
     }
   }
-#   image_registry_credential {
-#     server   = "acrdemomc.azurecr.io"
-#     username = var.acr-username
-#     password = var.acr-password
-#   }
+  image_registry_credential {
+    server   = "acrdemomc.azurecr.io"
+    username = var.acr_username
+    password = var.acr_password
+  }
 }
